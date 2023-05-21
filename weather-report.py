@@ -17,8 +17,8 @@ if data.status_code == 404:
 jsonf = data.json()
 city_name = jsonf['name']
 weather = jsonf['weather'][0]['description']
-temp = jsonf['main']['temp']+273.15
-feels_like = jsonf['main']['feels_like']+273.15
+temp = jsonf['main']['temp']-273.15
+feels_like = jsonf['main']['feels_like']-273.15
 humidity = jsonf['main']['humidity']
 
 #creating a message to be sent in structured format
